@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import about1 from "../../assets/images/about1.jpg";
 import about2 from "../../assets/images/about2.webp";
 import "./about.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   useEffect(() => {
     window.scroll(0, 0);
+    AOS.init({ duration: 500 });
   }, []);
 
   return (
@@ -35,7 +38,7 @@ const About = () => {
             </p>
 
             <div className="about__list">
-              <p className="about__list__back">
+              <p data-aos="zoom-in-up" className="about__list__back">
                 <b>Otasi tomondan:</b>
                 <ol type="1">
                   <li>Amir Temur koʻragon (1336-1405)</li>
@@ -46,7 +49,7 @@ const About = () => {
                   <li>Bobur (1483-1530)</li>
                 </ol>
               </p>
-              <p className="about__list__back">
+              <p data-aos="zoom-in-up" className="about__list__back">
                 <b>Onasi tomondan:</b>
                 <ol type="1">
                   <li>Tugʻluq Temurxon (1329-1362)</li>
@@ -61,9 +64,9 @@ const About = () => {
               </p>
             </div>
           </div>
-          <img src={about1} alt="" />
+          <img data-aos="fade-up-left" src={about1} alt="" />
         </div>
-        <div className="about__contex">
+        <div data-aos="zoom-in-up" className="about__contex">
           <span> 📌</span>
           <p>
             Boburning onasi oʻqimishli boʻlgan va oqila ayol boʻlib, Boburga
@@ -87,10 +90,10 @@ const About = () => {
             oʻtiradi (1494-yil iyun).
           </p>
           <p>
-            <b> Shoir sifatida ijodiy faoliyatining boshlanishi:</b> <br />{" "}
-            Boburning oʻz guvohligiga koʻra, shoir sifatida ijodiy faoliyati
-            Samarqandni ikkinchi marta egallagan vaqtda boshlangan; „Ul
-            fursatlarda birorikkirar bayt aytur edim“, deb yozadi u. Bobur
+            <span> Shoir sifatida ijodiy faoliyatining boshlanishi:</span>{" "}
+            <br /> Boburning oʻz guvohligiga koʻra, shoir sifatida ijodiy
+            faoliyati Samarqandni ikkinchi marta egallagan vaqtda boshlangan;
+            „Ul fursatlarda birorikkirar bayt aytur edim“, deb yozadi u. Bobur
             Samarqanddaligining ilk oylarida Alisher Navoiy tashabbusi bilan
             ular oʻrtasida yozishma boshlanadi. Bobur atrofida ijodkorlar
             toʻplana boshlashi ham shu yillarga toʻgʻri keladi. Jumladan,
@@ -112,7 +115,7 @@ const About = () => {
             toʻxtamadi, natijada, har jihatdan muhim boy ilmiy va adabiy meros
             qoldirdi.
             <br />
-            <b>Ijodi:</b> <br />
+            <span>Ijodi:</span> <br />
             Bobur 18-19 yoshlarida ruboiy va gʻazallar yoza boshlagan. Uning
             „Topmadim“ radifli gʻazali va „Yod etmas emish kishini gʻurbatda
             kishi“ misrasi bilan boshlanuvchi ruboiysi oʻsha yillardagi hayoti
@@ -142,20 +145,24 @@ const About = () => {
           </p>
         </div>
         <div className="about__bottom">
-          <p>
-            <b>Bobur ijodi</b> <br /> Bobur o‘zbek tarixida tom ma’noda yirik
-            shaxs. Uning tarixchi olim, zukko adib va dilbar shoir sifatida
-            qoldirgan adabiy merosi bebahodir. Bobur hukmdorlik
-            majburiyatlaridan ortib yirik asarlar yozishga muvaffaq bo‘lgan.
-            Uning lirikasi adabiyotdagi o‘ziga xos lirika. Shubhasiz,
-            she’riyatining asosiy mavzuyi Vatan, Vatan sog‘inchi bo‘lgan. Taxt
-            uchun qondosh aka-ukalarning dushman bo‘lib kurashishi, atrofdagi
-            insonlarning xiyonati, vatanini birlashtirolmaganidan so‘ng tortgan
-            azoblari va nihoyat umrining so‘nggigacha Vatan sog‘inchi uning
-            she’riyatiga ko‘chgan desak mubolag‘a bo‘lmaydi. Bu mavzular Bobur
-            g‘azallari, ruboiylarida keng yoritilgan.
-          </p>
-          <img src={about2} alt="" />
+          <div data-aos="fade-right">
+            <p>
+              <b>Bobur ijodi</b> <br /> Bobur o‘zbek tarixida tom ma’noda yirik
+              shaxs. Uning tarixchi olim, zukko adib va dilbar shoir sifatida
+              qoldirgan adabiy merosi bebahodir. Bobur hukmdorlik
+              majburiyatlaridan ortib yirik asarlar yozishga muvaffaq bo‘lgan.
+              Uning lirikasi adabiyotdagi o‘ziga xos lirika. Shubhasiz,
+              she’riyatining asosiy mavzuyi Vatan, Vatan sog‘inchi bo‘lgan. Taxt
+              uchun qondosh aka-ukalarning dushman bo‘lib kurashishi, atrofdagi
+              insonlarning xiyonati, vatanini birlashtirolmaganidan so‘ng
+              tortgan azoblari va nihoyat umrining so‘nggigacha Vatan sog‘inchi
+              uning she’riyatiga ko‘chgan desak mubolag‘a bo‘lmaydi. Bu mavzular
+              Bobur g‘azallari, ruboiylarida keng yoritilgan.
+            </p>
+          </div>
+          <div data-aos="fade-left">
+            <img src={about2} alt="" />
+          </div>
         </div>
       </div>
     </div>

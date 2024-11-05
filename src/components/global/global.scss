@@ -5,12 +5,12 @@
   &__box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 40px;
     align-items: center;
   }
 
   &__left {
-    padding-top: 100px;
+    padding: 40px 0px;
     img {
       width: 600px;
       height: 100%;

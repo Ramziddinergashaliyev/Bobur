@@ -4,7 +4,7 @@ import "./contact.scss";
 const Contact = () => {
   return (
     <div className="contact">
-      <div className="container">
+      <div data-aos="flip-right" className="container">
         <form className="contact__form">
           <h2>Biz Bilan Aloqa</h2>
           <label htmlFor="">

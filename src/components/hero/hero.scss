@@ -1,5 +1,5 @@
 .hero {
-  background: url(../../assets/images/hero3.jpg)no-repeat left / cover;
+  background: url(../../assets/images/hero3.jpg) no-repeat left / cover;
   height: 100vh;
 
   display: grid;
@@ -40,14 +40,14 @@
     }
   }
 
-  @media (max-width:1250px) {
+  @media (max-width: 1250px) {
     &__box {
       grid-template-columns: 1fr;
       place-items: center;
     }
   }
 
-  @media (max-width:805px) {
+  @media (max-width: 805px) {
     background-position: left;
 
     &__info {
@@ -68,7 +68,7 @@
     }
   }
 
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     &__info {
       h2 {
         font-size: 22px;

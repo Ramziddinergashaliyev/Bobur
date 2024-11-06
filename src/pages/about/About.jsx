@@ -2,15 +2,8 @@ import React, { useEffect } from "react";
 import about1 from "../../assets/images/about1.jpg";
 import about2 from "../../assets/images/about2.webp";
 import "./about.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const About = () => {
-  useEffect(() => {
-    window.scroll(0, 0);
-    AOS.init({ duration: 500 });
-  }, []);
-
   return (
     <div className="about">
       <div className="container">
